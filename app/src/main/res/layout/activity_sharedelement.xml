@@ -28,11 +28,12 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical|start"
                 android:text="@{sharedSample.name}"
-                android:transitionName="@string/sample_blue_title" />
+                 />
 
         </android.support.v7.widget.Toolbar>
 
         <TextView
+            android:transitionName="@string/sample_blue_title"
             style="@style/MaterialAnimations.Text.Body"
             android:text="Toolbar title is a shared element between MainActivity and this activity" />
 

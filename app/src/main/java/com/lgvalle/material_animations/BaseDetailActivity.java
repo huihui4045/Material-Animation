@@ -29,7 +29,8 @@ public class BaseDetailActivity extends AppCompatActivity {
         return true;
     }
 
-    @SuppressWarnings("unchecked") void transitionTo(Intent i) {
+    @SuppressWarnings("unchecked")
+    void transitionTo(Intent i) {
         final Pair<View, String>[] pairs = TransitionHelper.createSafeTransitionParticipants(this, true);
         ActivityOptionsCompat transitionActivityOptions = ActivityOptionsCompat.makeSceneTransitionAnimation(this, pairs);
         startActivity(i, transitionActivityOptions.toBundle());

@@ -49,6 +49,21 @@ public class SamplesRecyclerAdapter extends RecyclerView.Adapter<SamplesRecycler
                     case 3:
                         transitionToActivity(RevealActivity.class, viewHolder, sample, R.string.transition_reveal1);
                         break;
+                    case 4:
+
+                        //transitionToActivity(MyActivity.class, sample);
+
+
+
+
+                        Pair<View, String>[] pairs = TransitionHelper.createSafeTransitionParticipants(activity, false,
+                                new Pair<>(viewHolder.binding.sampleName, activity.getString(R.string.string_text)));
+
+                        ActivityOptionsCompat activityOptionsCompat=ActivityOptionsCompat.makeSceneTransitionAnimation(activity,pairs);
+
+                        activity.startActivity(new Intent(activity, MyActivity.class),activityOptionsCompat.toBundle());
+
+                        break;
                 }
             }
         });
